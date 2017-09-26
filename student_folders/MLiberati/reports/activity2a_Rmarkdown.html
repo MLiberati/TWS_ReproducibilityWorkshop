@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Including Plots</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<p>&ldquo;{r setup, include=FALSE} # can use other code types (e.g., python)
+knitr::opts_chunk$set(echo = TRUE) # global setting</p>
+
+<pre><code>
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;http://rmarkdown.rstudio.com&gt;.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+```r
+summary(cars)
+</code></pre>
+
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+</code></pre>
+
+<h2>Including Plots</h2>
+
+<p>You can also embed plots, for example:</p>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk pressure"/></p>
+
+<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+
+</body>
+
+</html>
